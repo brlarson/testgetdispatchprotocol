@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.osate.test.get.dispatch.protocol.TestCaseHandler"
+            id="org.osate.test.get.dispatch.protocol.command1"
+            name="test getDispatchProtocol">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.osate.ui.navigator.AadlNavigator">
+         <command
+               commandId="org.osate.test.get.dispatch.protocol.command1"
+               label="test getDispatchProtocol"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+
+</plugin>
